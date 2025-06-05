@@ -1,20 +1,25 @@
-
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Kontener kontener1 = new Kontener(52, 5, 2, 4 ,"KON_C_1", 100);
-        Kontener kontener2 = new Kontener(123, 200, 200, 600 ,"KON_L_2", 500);
+        ArrayList numerySeryjne = new ArrayList<Kontener>();
 
-        //kontener1.oproznienieLadunku();
-        //System.out.println(kontener1.masaLadunku);
+        Kontener kontener1 = new Kontener(52, 5, 2, 4 ,1, "C");
+        numerySeryjne.add(kontener1);
+        kontener1.assignNumerSeryjny(numerySeryjne.indexOf(kontener1));
 
+        Kontener kontener2 = new Kontener(123, 200, 200, 600 ,2, "L");
+        numerySeryjne.add(kontener2);
+        kontener2.assignNumerSeryjny(numerySeryjne.indexOf(kontener2));
 
-        kontener1.zaladowanieLadunku(39);
-        System.out.println(kontener1.masaLadunku);
+        //System.out.println(kontener2.getNumerSeryjny());
+
 
 
     }
+
+
 
 }

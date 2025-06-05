@@ -4,15 +4,26 @@ class Kontener {
     int wagaWlasna;
     int glebokosc;
     int maksLadownosc;
-    String numerSeryjny;
+    public int numerSeryjny;
+    String typKontenera;
 
-    public Kontener(int masaLadunku, int wysokosc, int wagaWlasna, int glebokosc, String numerSeryjny, int maksLadownosc) {
+
+
+    public Kontener(int masaLadunku, int wysokosc, int wagaWlasna, int glebokosc, int maksLadownosc, String typKontenera) {
         this.masaLadunku = masaLadunku;
         this.wysokosc = wysokosc;
         this.wagaWlasna = wagaWlasna;
         this.glebokosc = glebokosc;
         this.maksLadownosc = maksLadownosc;
-        this.numerSeryjny = numerSeryjny;
+        this.typKontenera = typKontenera;
+        }
+
+    public void assignNumerSeryjny(int i){
+            this.numerSeryjny = i+1;
+    }
+
+    public String getNumerSeryjny(){
+        return "KON_" + this.typKontenera+"_" + this.numerSeryjny;
     }
 
 
